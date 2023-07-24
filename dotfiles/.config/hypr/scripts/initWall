@@ -1,0 +1,22 @@
+#!/bin/bash
+
+export PATH="${PATH}:${HOME}/.local/bin/"
+
+swww init
+
+if [ -e "${HOME}/.cache/wal/colors" ]; then
+    wal -R --cols16
+    #wal -R 
+    echo "Cached colors exist. Using existing colors."
+    WALL=$(cat $HOME/.cache/mywall)
+    swaybg -o \* -i $WALL 
+    echo $WALL
+    echo "Successfully set a new wallpaper and generated colors from it."
+fi
+
+pywalfox update
+pywal-discord -t default
+wal-telegram --wal
+
+. $HOME/.config/spicetify/Themes/Pywal/update-colors.sh
+. $HOME/.config/cava/scripts/update-colors.sh

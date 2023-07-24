@@ -1,0 +1,13 @@
+[SddmGreeterTheme]
+Name=Elegant
+Description=Elegant-SddmGreeterTheme.
+Screenshot=preview.png
+License=CC-BY-SA
+Type=sddm-theme
+Version=1.0
+Screenshot=preview.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Theme-Id=Elegant
+Theme-API=2.0

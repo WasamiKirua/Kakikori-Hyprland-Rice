@@ -30,7 +30,12 @@ source $ZSH/oh-my-zsh.sh
 
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 alias hyprcfg="code ${HOME}/.config/hypr/hyprland.conf"
 alias waycfg="code ${HOME}/.config/waybar"
+alias destroy="sudo bleachbit --clean --overwrite system.localizations deepscan.ds_store system.tmp system.recent_documents system.cache deepscan.backup deepscan.ds_store deepscan.tmp"p
+alias mem="sudo bleachbit --clean system.memory"
+alias clean="bleachbit --clean --overwrite chromium.cache chromium.cookies chromium.history deepscan.ds_store deepscan.tmp"
+alias vim=nvim
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

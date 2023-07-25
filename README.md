@@ -140,3 +140,9 @@ this work would have never been possibile without the awesome jobs of these dude
 - https://github.com/1amSimp1e/dots/tree/late-night-%F0%9F%8C%83
 - https://github.com/rchrdwllm/dotfiles/tree/master
 - https://github.com/JaKooLit/Hyprland-v3
+
+### Known issues
+
+- Waybar takes a few seconds (sometime) to load
+
+- The wallpaper changer (SUPER + W) does not exit successfully

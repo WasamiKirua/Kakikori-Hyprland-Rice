@@ -9,6 +9,9 @@ wallpapers=$HOME/.config/hypr/wallpapers
 image="$(ls $wallpapers | rofi -dmenu -i -p "  Select wallpaper: " -theme ${dir}/${theme}.rasi)"
 wallpaper=$wallpapers/$image
 
+# Save the new wallpepers so Hyprland will pick it up next boot
+echo $wallpapers/$image > $HOME/.cache/mywall
+
 if [[ -d $wallpapers/$image ]]; then
     echo "$wallpapers/$image is a directory"
     wallpaper_temp="$image"

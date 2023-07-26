@@ -128,6 +128,23 @@ Login with Discord first, then run `betterdiscordctl install` in your terminal, 
 
 There's a short and easy-to-follow guide for setting up Discord with Pywal [here](https://github.com/FilipLitwora/pywal-discord).
 
+## Setting up VS Code
+
+There's a [Pywal](https://marketplace.visualstudio.com/items?itemName=dlasagno.wal-theme) theme for VS Code. Colors will automatically update as well once you apply the theme.
+
+## Setting up Chromium
+
+The bash script to handle the color palette change for chromium is already includede in .local/bin, however please refer to [Chromium](https://github.com/metafates/ChromiumPywal) for the set up
+
+## Setup Neovim
+
+I have Neovim set up for python development. syntax highlighting, debugger, auto formatting and more. all the necessary config files are alredy 
+under ./config/neovim. back them up to replace them later and follow the following video tutorial:
+
+[NvimPython](https://www.youtube.com/watch?v=4BnVeOUeZxc)
+
+by doing so you will avoid any sort of problem related to missing plugins and so on.
+
 ### Notes
 
 I am completely new to ricing, one saturday morning while i was looking at UnixPorn for my first time, I've 

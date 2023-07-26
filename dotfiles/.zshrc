@@ -36,6 +36,15 @@ alias waycfg="code ${HOME}/.config/waybar"
 alias destroy="sudo bleachbit --clean --overwrite system.localizations deepscan.ds_store system.tmp system.recent_documents system.cache deepscan.backup deepscan.ds_store deepscan.tmp"p
 alias mem="sudo bleachbit --clean system.memory"
 alias clean="bleachbit --clean --overwrite chromium.cache chromium.cookies chromium.history deepscan.ds_store deepscan.tmp"
+
+#Neovim
+
 alias vim=nvim
+
+
+#Pyenv 
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

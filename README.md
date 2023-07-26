@@ -139,11 +139,25 @@ The bash script to handle the color palette change for chromium is already inclu
 ## Setup Neovim
 
 I have Neovim set up for python development. syntax highlighting, debugger, auto formatting and more. all the necessary config files are alredy 
-under ./config/neovim. back them up to replace them later and follow the following video tutorial:
+under ./config/neovim move the neovim folder somewhere else for now, you are going to clone a repo, you will put some newly created lua file in there later.
+
+- mkdir ~.config/nvim
+- git clone https://github.com/NvChad/NvChad /home/irako/.config/nvim --depth 1
+- cd ~.config/nvim
+- $ vim
+- press No (n)
+- space + t + h --> to select the theme you want
+- :TSInstall python
+- exit nvim (:q)
+- now make a diff between the new nvim directory and the one in this repo. you besically need to replace all the files under ./config/nvim/lua/custom
+- $ vim
+- :MasonInstallAll
+- exit vim
+
+you should be good to go. for reference, key binding explanation and so on please have a look at:
 
 [NvimPython](https://www.youtube.com/watch?v=4BnVeOUeZxc)
 
-by doing so you will avoid any sort of problem related to missing plugins and so on.
 
 ### Notes
 

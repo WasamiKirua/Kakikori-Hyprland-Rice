@@ -77,12 +77,21 @@ other_toys=(
     networkmanager-openvpn
     playerctl
     python 
+    ripgrep
+    nodejs
+    npm
     python-pip 
     python-pillow
     swaybg
     tmux 
     zsh 
     waybar
+    docker
+    pyenv
+    bleachbit-cli
+    tk
+
+
 )
 
 file_manager=(

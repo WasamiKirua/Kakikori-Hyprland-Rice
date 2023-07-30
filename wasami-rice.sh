@@ -128,8 +128,6 @@ RESET=$(tput sgr0)
 ### Set LOG
 LOG="install-$(date +%d-%H%M%S).log"
 
-clear
-
 ### Print logo.txt
 tput setaf 5; cat logo.txt
 printf "\n"
@@ -154,17 +152,6 @@ else
     printf "\n%s  NO changes made to your system. Cheers\n" "${NOTE}"
     exit
 fi
-
-clear
-
-printf "\n${NOTE} Some pre-reqs.\n"
-for mypkg in nano git; do
-    sudo pacman -S --noconfirm "$mypkg" 2>&1 | tee -a "$LOG"
-    if [ $? -ne 0 ]; then
-        echo -e "\e[1A\e[K${ERROR} - $PKG1 install had failed, please check the install.log"
-        exit 1
-    fi
-done
 
 ### Check for AUR helper and install if not found
 ISAUR=$(command -v yay || command -v paru)
@@ -252,8 +239,8 @@ if ! lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia; then
         install_package "$HYP" 2>&1 | tee -a $LOG
     done
 else
-	printf "${YELLOW} NVIDIA GPU Detected. Installing Hyprland with NVIDIA support...\n"
-	sleep 1
+    printf "${YELLOW} NVIDIA GPU Detected. Installing Hyprland with NVIDIA support...\n"
+    sleep 1
     install_package "hyprland-git" 2>&1 | tee -a $LOG
     printf "\n%s - Installin additional NVIDIA packages \n" "${NOTE}"
     echo
@@ -274,7 +261,7 @@ else
     printf "\n"
     
     # preparing exec.conf to enable env = WLR_NO_HARDWARE_CURSORS,1 so it will be ready once config files copied
-    sed -i '1,2s/#//' configs/hypr/hyprland.conf
+    sed -i '1,2s/#//' dotfiles/.congif/hypr/hyprland.conf
     
     # Additional Nvidia steps
     NVEA="/etc/modprobe.d/nvidia.conf"
